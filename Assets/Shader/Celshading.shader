@@ -45,7 +45,7 @@ Shader "Custom/Celshading" {
 				float4 pos = mul(UNITY_MATRIX_MV, v.vertex);
 				float3 normal = mul((float3x3)UNITY_MATRIX_MV, v.normal);
 				normal.z = -0.5;
-				//模型按照顶点方向外扩一定距离
+				//模型按照法线方向外扩一定距离
 				pos = pos + float4(normalize(normal), 0)*_Outline;
 				//转移到裁剪空间
 				o.pos = mul(UNITY_MATRIX_P, pos);
@@ -109,7 +109,7 @@ Shader "Custom/Celshading" {
 					UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
 
 					fixed diff = dot(worldNormal, worldLightDir);
-					diff = 0.5*diff + 0.5;
+					diff = (0.5*diff + 0.5)*atten;
 					fixed spec = max(0, dot(worldNormal, worldHalfDir));
 					spec = pow(spec, _Shininess);
 
