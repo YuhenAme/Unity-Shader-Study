@@ -434,6 +434,7 @@ GameObject:
   - component: {fileID: 534669903}
   - component: {fileID: 534669907}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669908}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -523,6 +524,7 @@ MonoBehaviour:
   totalFactor: 1
   waveWidth: 0.3
   waveSpeed: 0.3
+  startPos: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,7 +532,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c23f69d548cc7594cb0f4e78e67eb422, type: 3}
   m_Name: 
@@ -538,6 +540,25 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: 6827a385f6d4e1e4daeb451760430987, type: 3}
   timeFactor: 30
   pulseFactor: 1
+  waveWitdh: 0.1
+  waveSpeed: 0.3
+  controllOffset: 1
+--- !u!114 &534669908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c77c67dcb8dc4e4bae8948631153c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: cc61bf67ba0874b428827bce98a60389, type: 3}
+  BlurRadius: 1
+  downSample: 2
+  iteration: 1
 --- !u!1001 &700368393
 PrefabInstance:
   m_ObjectHideFlags: 0
