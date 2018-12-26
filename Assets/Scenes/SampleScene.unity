@@ -418,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: f1854be4f14773e4797b7703c4fc8a27, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d6d4119dc5d46104287e677bad08896b, type: 2}
+      objectReference: {fileID: 2100000, guid: a192de6bcbba26e49aec497e83137e6a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1854be4f14773e4797b7703c4fc8a27, type: 3}
 --- !u!1 &534669902
@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 534669907}
   - component: {fileID: 534669906}
   - component: {fileID: 534669908}
+  - component: {fileID: 534669909}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -559,6 +560,21 @@ MonoBehaviour:
   BlurRadius: 1
   downSample: 2
   iteration: 1
+--- !u!114 &534669909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e8af53d8b460447a21f961c099a5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: fc7d9276ed0dcd146ac89813656f2add, type: 3}
+  BlurFactor: -0.01
+  BlurCenter: {x: 0.5, y: 0.5, z: 0, w: 0}
 --- !u!1001 &700368393
 PrefabInstance:
   m_ObjectHideFlags: 0
